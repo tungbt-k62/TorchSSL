@@ -216,7 +216,7 @@ def main_worker(gpu, ngpus_per_node, args):
                                                args.batch_size * args.uratio,
                                                data_sampler=args.train_sampler,
                                                num_iters=args.num_train_iter,
-                                               num_workers=4 * args.num_workers,
+                                               num_workers=2 * args.num_workers,
                                                distributed=args.distributed)
 
     loader_dict['eval'] = get_data_loader(dset_dict['eval'],
